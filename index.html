@@ -252,7 +252,7 @@ function v26PrintBook(){
  *{box-sizing:border-box}body{margin:0;color:#403b35;background:#fff;font:14px/1.7 -apple-system,"PingFang SC","Apple SD Gothic Neo",sans-serif}
  .page{max-width:173mm;margin:auto}.cover,.toc,.chapter{break-before:page;page-break-before:always}
  .cover{break-before:auto;page-break-before:auto;min-height:235mm;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid #e7e4d9;border-radius:18px;padding:30px;background:#faf8f2}
- .cover-mark{font-size:42px;color:#8ca994}.cover h1{font-size:34px;line-height:1.5;margin:18px 0}.cover-sub{color:#89786b;font-size:15px}.cover-foot{margin-top:80px;color:#a18576;letter-spacing:2px;font-size:11px}
+ .cover-mark{width:92px;height:92px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;border:1px solid #d8e0d5;border-radius:50%;background:#f1f5ed}.cover-mark svg{width:57px;height:57px;display:block}.cover h1{font-size:34px;line-height:1.5;margin:18px 0}.cover-sub{color:#89786b;font-size:15px}.cover-foot{margin-top:80px;color:#a18576;letter-spacing:2px;font-size:11px}
  .toc{padding-top:35px}.toc h1{font-size:27px}.toc-item{display:flex;gap:18px;align-items:baseline;padding:13px 6px;border-bottom:1px solid #eae5de}
  .toc-item span{color:#b78d7f;font-size:13px}.toc-item strong{flex:1;font-weight:500;font-size:17px}.toc-item small{color:#8d847a}
  .chapter{padding-top:3px}.chapter-head{text-align:center;border-bottom:1px solid #e9ded1;padding-bottom:14px;margin-bottom:18px}
@@ -270,7 +270,7 @@ function v26PrintBook(){
  @media screen{body{background:#eeeae4;padding:20px}.page{background:#fff;padding:35px;box-shadow:0 5px 25px #ccc}.cover,.toc,.chapter{margin-bottom:45px}}`;
  const html='<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+e(title)+' · HanChinese AI</title><style>'+css+'</style></head><body>'+
  '<button class="print" onclick="window.print()">打印 / 存储为 PDF · PDF 저장</button><p class="tip">A4 竖版 · 左侧装订留白 22mm · '+lessons.length+' 篇课程 · 打印时请开启背景图形</p>'+
- '<main class="page"><section class="cover"><div class="cover-mark">✳</div><div class="eyebrow">HAN CHINESE AI · MY LEARNING BOOK</div><h1>'+e(title)+'</h1>'+
+ '<main class="page"><section class="cover"><div class="cover-mark"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="手绘书本与叶子"><path d="M31 19c-8-5-16-5-23-2v27c8-3 16-2 23 3 7-5 15-6 23-3V17c-7-3-15-3-23 2Z" stroke="#6D8B75" stroke-width="2.1" stroke-linejoin="round"/><path d="M31 20v27M13 24c5-1 9 0 13 2M13 31c5-1 9 0 13 2M36 27c4-2 8-3 13-2M36 34c4-2 8-3 13-2" stroke="#A3B5A3" stroke-width="1.6" stroke-linecap="round"/><path d="M32 18c0-7 5-11 11-12-1 7-5 11-11 12ZM31 17c-2-6-7-9-12-9 1 6 5 9 12 9Z" fill="#AFC5A7" stroke="#6D8B75" stroke-width="1.2" stroke-linejoin="round"/></svg></div><div class="eyebrow">HAN CHINESE AI · MY LEARNING BOOK</div><h1>'+e(title)+'</h1>'+
  '<div class="cover-sub">'+e(subtitle||'나만의 중국어 학습책')+'</div><div class="cover-foot">HAN CHINESE AI · 한중지학</div></section>'+
  '<section class="toc"><div class="eyebrow">CONTENTS · 목차</div><h1>目录 · 차례</h1>'+toc+'</section>'+chapters+'</main></body></html>';
  const w=window.open('','_blank');
